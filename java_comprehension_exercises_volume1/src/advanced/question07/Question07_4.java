@@ -19,7 +19,6 @@ public class Question07_4 {
 		int sum = 0;
 		double discount = 0.9;
 		double tax = 1.1;
-		double tax_price[] = new double[5];
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		for (int i = 0; i < itemNames.length; i++) {
 			System.out.print(itemNames[i] + "の購入数:>");
