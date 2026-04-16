@@ -26,14 +26,28 @@ public class Question07_5 {
 			amounts[i] = Integer.parseInt(str);
 			sum += (int) (amounts[i] * prices[i] * tax);
 		}
+		boolean discountflag = false;
 		System.out.println("購入内容一覧");
-		for (int i = 0; i < itemNames.length; i++) {
-			System.out.println(
-					itemNames[i] + ":単価" + prices[i] + "円(税込" + (int) (prices[i] * tax) + "円)×" + amounts[i] + "個＝"
-							+ (int) (amounts[i] * prices[i] * tax) + "円");
+		if (sum >= 5000) {
+			discountflag = true;
 		}
-		System.out.println("合計(税込)：" + sum + "円");
-		sum *= discount;
-		System.out.println("割引適用後合計（税込）:" + sum + "円");
+
+		if (discountflag) {
+			for (int i = 0; i < itemNames.length; i++) {
+				System.out.println(
+						itemNames[i] + ":単価" + prices[i] + "円(税込" + (int) (prices[i] * tax) + "円)×" + amounts[i] + "個＝"
+								+ (int) (amounts[i] * prices[i] * tax) + "円");
+			}
+			System.out.println("合計(税込)：" + sum + "円");
+			sum *= discount;
+			System.out.println("割引適用後合計（税込）:" + sum + "円");
+		} else {
+			for (int i = 0; i < itemNames.length; i++) {
+				System.out.println(
+						itemNames[i] + ":単価" + prices[i] + "円(税込" + (int) (prices[i] * tax) + "円)×" + amounts[i] + "個＝"
+								+ (int) (amounts[i] * prices[i] * tax) + "円");
+			}
+			System.out.println("合計(税込)：" + sum + "円");
+		}
 	}
 }
