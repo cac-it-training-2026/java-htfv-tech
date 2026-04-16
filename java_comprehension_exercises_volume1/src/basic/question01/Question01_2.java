@@ -3,11 +3,10 @@ package basic.question01;
 /**
  * 第4章 変数
  */
-
 public class Question01_2 {
 
 	public static void main(String[] args) {
-		
+
 		// TODO:ここに実装
 
 	}
